@@ -89,7 +89,7 @@ This project demonstrates:
 
 **[Surya Yousufzai]**
 - GitHub: [suryayousufzai](https://github.com/suryayousufzai)
-- LinkedIn: (https://www.linkedin.com/in/surya-y-113964238/)
+- LinkedIn: [Surya Yousufzai Software Engineer](https://www.linkedin.com/in/surya-y-113964238/)
 
 ## License
 

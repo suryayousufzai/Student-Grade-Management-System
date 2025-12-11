@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.GradeManagementController">
+    <children>
+        <Label text="Grade Management">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <HBox spacing="10.0">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Select Student:" />
+                        <ComboBox fx:id="comboStudents" prefWidth="200.0" promptText="Choose Student" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Course Name:" />
+                        <TextField fx:id="txtCourseName" prefWidth="200.0" promptText="Enter Course" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Score (0-100):" />
+                        <TextField fx:id="txtScore" prefWidth="150.0" promptText="Enter Score" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox spacing="10.0">
+            <children>
+                <Button onAction="#addGrade" text="Add Grade" />
+                <Button onAction="#deleteGrade" text="Delete Grade" />
+                <Button onAction="#clearFields" text="Clear" />
+                <Button onAction="#calculateGPA" text="Calculate GPA" />
+            </children>
+        </HBox>
+        <Label fx:id="lblGPA" text="GPA: N/A">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="gradeTable" prefHeight="300.0">
+            <columns>
+                <TableColumn fx:id="colStudentId" prefWidth="150.0" text="Student ID" />
+                <TableColumn fx:id="colCourseName" prefWidth="200.0" text="Course Name" />
+                <TableColumn fx:id="colScore" prefWidth="100.0" text="Score" />
+                <TableColumn fx:id="colLetterGrade" prefWidth="100.0" text="Letter Grade" />
+            </columns>
+        </TableView>
+        <Button onAction="#goBack" text="Back to Main Menu" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

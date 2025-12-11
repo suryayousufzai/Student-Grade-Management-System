@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.StudentManagementController">
+    <children>
+        <Label text="Student Management">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <HBox spacing="10.0">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Student ID:" />
+                        <TextField fx:id="txtStudentId" promptText="Enter ID" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Student Name:" />
+                        <TextField fx:id="txtName" promptText="Enter Name" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Major:" />
+                        <TextField fx:id="txtMajor" promptText="Enter Major" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox spacing="10.0">
+            <children>
+                <Button onAction="#addStudent" text="Add Student" />
+                <Button onAction="#updateStudent" text="Update Student" />
+                <Button onAction="#deleteStudent" text="Delete Student" />
+                <Button onAction="#clearFields" text="Clear" />
+            </children>
+        </HBox>
+        <!-- dear professor in here I add table -->
+        <TableView fx:id="studentTable" prefHeight="300.0">
+            <columns>
+                <TableColumn fx:id="colStudentId" prefWidth="150.0" text="Student ID" />
+                <TableColumn fx:id="colName" prefWidth="250.0" text="Name" />
+                <TableColumn fx:id="colMajor" prefWidth="200.0" text="Major" />
+            </columns>
+        </TableView>
+        <!-- dear professor in here I add back Button -->
+        <Button onAction="#goBack" text="Back to Main Menu" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
